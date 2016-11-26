@@ -241,6 +241,77 @@
             ```
           </script>
         </section>
+        <!-- slide 14-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Numbers
+            There are 2 basic types of numbers: 
+
+            - `Integers` - whole numbers without decimal points
+              - `3   5  13  -21`
+            - `Floats` - numbers with decimal points.
+              - `0.0  3.14  0.0034`
+
+            Numbers have few basic operations you can perform with them.
+            
+          </script>
+        </section>
+        <!-- slide 15-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Using Operators with Numbers
+            `Addition: +`
+            ```sh
+              > 3 + 4
+              => 7
+            ```
+            
+            `subtraction: -`
+            ```sh
+              > 4 - 2
+              => 2
+            ```
+            
+            `Multiplication: *`
+            ```sh
+            > 15 * 10
+            => 150
+            ```
+            
+            `Division: /`
+            ```sh
+            > 10 / 3
+            => 3
+            ```
+          </script>
+        </section>
+        <!-- Slide 16 -->
+        <section data-markdown>
+          <!-- thinking about remobing modulo from this section -->
+          <!-- make smaller or cut into 2 slides -->
+          <script type="text/template">
+            ### Using Operators with Numbers
+
+            Wait, what was that?  Did you catch what happened with `Division`?
+            
+            `Division: /`
+            ```sh
+            > 10 / 3
+            => 3
+            ```
+
+            Ruby returned `3` instead of `3.333333`
+            When you're dividing with two `Integers` ruby assumes you would like
+            it to return an `Integer` as the result.  If you would like decimals
+            returned with your answer, you need to use a `Float` since Intergers
+            can not have any decimals
+
+            ```sh
+              > 10 / 3.0
+              => 3.33333333
+            ```
+          </script>
+        </section>
 			</div>
 		</div>
 
