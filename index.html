@@ -223,8 +223,22 @@
         <!-- slide 13-->
         <section data-markdown>
           <script type="text/template">
+            ### Strings
+            String Interpolation - Fancy name, easy meaning.
+            This is when you output the value of a variable inside a String.
 
+            To use this, you **must use double quotation marks** and anything in
+            between `#{}` gets evaluated as ruby code.
 
+            Let's try to same example from before but using interpolation
+
+            ```sh
+            > "My name is #{first_name} #{last_name}"
+            => "My name is Cody Norman"
+
+            > "Three + Four is: #{ 3 + 4 }"
+            => "Three + Four is: 7"
+            ```
           </script>
         </section>
 			</div>
