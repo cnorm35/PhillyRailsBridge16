@@ -427,6 +427,66 @@
             ```
           </script>
         </section>
+        <!-- Slide 21 -->
+        <section data-markdown>
+          <!-- Look into hash being highlighted wrong -->
+          <script type="text/template">
+            ### Hashes
+
+            **Hash Syntax**
+            Hashes are surrounded with `{ }` and `key: value` pairs seperated by
+            a comma.
+
+            Since we refer to a Hashes value by it's `key`, each `key` needs to
+            be unique
+
+            There are 2 different ways to declare `key: value` pairs inside a
+            Hash.  
+
+            The older Hash Rocket syntax, and the current one using colons
+
+          </script>
+        </section>
+        <!-- Slide 22 -->
+        <section data-markdown>
+          <!-- Look into hash being highlighted wrong -->
+          <!-- Make this shorter -->
+          <script type="text/template">
+            ### Hashes
+            *Hash Rocket Syntax*
+            ```sh
+              > hash_rocket_address = { :city => "Philadelphia", :state=> "PA", :zip => 19143 }
+              => { :city=> "Philadelphia", :state=> "PA", :zip=> 19143 }
+
+              > hash_rocket_address[:city]
+              => "Philadelphia"
+            ```
+            *Using colons* 
+            ```sh
+              > colons_address = { city: 'Philadelphia', state: 'PA', zip: 19143 }
+              => { :city=> "Philadelphia", :state=> "PA", :zip=> 19143 }
+              
+              > colons_address[:city]
+              => "Philadelphia"
+
+              > colons_address[:city] == hash_rocket_address[:city]
+              => true
+
+            ```
+
+            Adding new values to the hash is easy:
+
+            ```sh
+              > colon_address[:street] = "22 S. 3rd Street"
+              => '22 S. 3rd Street'
+
+              > colon_address
+              => { :city=> "Philadelphia", :state=> "PA", :zip=> 19143, street:
+              '22 S. 3rd Street' }
+            ```
+
+          </script>
+        </section>
 			</div>
 		</div>
 
