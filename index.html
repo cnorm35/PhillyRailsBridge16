@@ -103,14 +103,126 @@
             ### Variables
             A variable is a way to store information to be used later.
 
-            ```ruby
-              my_first_varaible = 'dog'
+            ```sh
+              > my_first_varaible = 'dog'
               => 'dog'
-              my_first_varaible
+              > my_first_varaible
               => 'dog'
             ```
             This is called **assignment**.  We're assigning the value `dog` to
             the variable `my_firs_variable`
+
+
+          </script>
+        </section>
+        <!-- Slide 8-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Variables
+
+            When assigning variables, the *right side* is evaluated first, and
+            the result is *assigned* to the value on the left side.
+
+            ```sh
+              > cats = 3
+              => 3
+              
+              > dogs = 2
+              => 2
+
+              > pets = cats + dogs
+              => 5
+            ```
+          </script>
+        </section>
+        <!-- Slide 9-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Variables
+
+            What types of information can variables hold?
+
+            - Strings "I am a string"
+            - Numbers & resulats from calculations `2` `(2*3) + 4`
+            - Collections
+              - Arrays `[1,3,5,7]`    `['cody','norman']`
+              - Hashes `{ first_name: 'Cody', last_name: 'Norman', profession:
+              'Software Developer' }`
+            - Booleans `true` `false`
+
+            We're going to talk more about each one of these types.  Let's
+            starts with Strings...
+          </script>
+        </section>
+        <!-- Slide 10-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Strings
+            A String is just text.  You can use either single `'`, or double
+            quotation marks `"`
+
+            ```sh
+            > 'This works'
+            => 'This works'
+            
+            > "So does this"
+            => "So does this"
+            ```
+
+            Lets create a variable `first_name` and set it equal to your first
+            name
+
+            ```sh
+            > first_name = 'Cody'
+            => 'Cody'
+            ```
+          </script>
+        </section>
+        <!-- Slide 11-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Strings
+            Now let's do the same thing with `last_name`:
+            ```sh
+            > last_name = 'Norman'
+            => 'Norman'
+            ```
+            Now see what happens when we add these together
+            ```sh
+            > first_name + last_name
+            => 'CodyNorman'
+            ```
+            Computers are dumb, they can only do exactly what you tell them to.
+            Tell it to add a space between `first_name` and `last_name`
+            ```sh
+            > first_name + " " + last_name
+            => "Cody Norman"
+            ```
+          </script>
+        </section>
+        <!-- slide 12-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Strings
+
+            Ruby also gives us some handy methods to use on strings.  this is
+            part of the fun when programming in ruby.
+
+            ```sh
+            > activity = "learning ruby"
+            => "learning ruby"
+            
+            > activity.upcase
+            => "LEARNING RUBY"
+
+            > activity.capitalize
+            => "Learning ruby"
+            ```
+          </script>
+        </section>
+        <!-- slide 13-->
+        <section data-markdown>
+          <script type="text/template">
 
 
           </script>
