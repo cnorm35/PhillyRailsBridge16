@@ -759,6 +759,106 @@
 
           </script>
         </section>
+        <!-- Slide 35 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            **Change Directory**
+
+            When giving a file to the `cd` command, you can use either a
+            `full_path` which is the path of that directory starting from the
+            top level 
+            
+            `$ cd /Users/Cody/Code`
+            
+            or a `relative_path` which is
+            based on where we are currently at inside our file system (to find
+            this out, run `pwd`)
+
+          </script>
+        </section>
+        <!-- Slide 36 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+            
+            *relative path*
+            
+            With a `relative path`, you dont have to pass the whole path from
+            the top, just based on the directory where youre currently at.
+
+
+            ```sh
+              $ pwd
+
+              /Users/Cody/Code
+
+              $ cd Presentations
+
+              $ pwd
+
+              /Users/Cody/Code/Presentations
+            ```
+          </script>
+        </section>
+        <!-- Slide 37 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            *change directory* shortcuts
+
+            To get to your home path, just run `cd` with no path
+
+            ```sh
+              $ cd
+              
+              $ pwd
+
+              /Users/Cody
+            ```
+
+            To get to the last directory you were in use `-` (dash) as the path to the
+            `cd` command
+
+            ```sh
+              $ cd -
+
+              $ pwd
+
+              /Users/Cody/Cody/Presentations
+            ```
+            
+          </script>
+        </section>
+        <!-- Slide 38 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Creating new directories
+
+            To create a new directory, we use the 'Make Directory' command with
+            
+            `$ mkdir name_of_the_directory`
+            
+            ```sh
+              $ mkdir my_first_directory
+
+              $ ls
+
+              intro_to_ruby   my_first_directory
+
+              $ cd my_first_directory
+
+              $ pwd
+
+              /Users/Code/Code/Presentations/my_first_directory
+            ```
+
+            
+          </script>
+        </section>
+
 			</div>
 		</div>
 
