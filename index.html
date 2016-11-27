@@ -661,6 +661,104 @@
             
           </script>
         </section>
+        <!--************* Beginning of Command Line section ****************-->
+        <!-- Slide 30 -->
+        <section data-markdown>
+          <script type="text/template">
+            #Command Line Basics
+          </script>
+        </section>
+        <!-- Slide 31 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            **Directory**
+
+            What is a directory?
+            
+            A directory is a folder that contain other directories or files
+            
+
+            **Current Directory**
+
+            You're always inside a directory.  The see where you're at in your
+            file systemy run the command `pwd`.  This stands for 'print working
+            directory'.
+
+            ```sh
+            $ pwd
+            /Users/Cody/Code/Presentations/intro_to_ruby
+            ```
+
+            Don't worry about yours looking different.
+          </script>
+        </section>
+        <!-- Slide 32 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+            
+            **Listing Files** (check on difference between OSX and Windows)
+            
+            To see a list of files inside the `directory` that you are
+            currently in use the `ls` command:
+
+            ```sh
+            $ ls
+            
+            Applications   Documents      Library        Pictures       exercism
+            Code           Downloads      Movies         Public         node_modules
+            Desktop        Google Drive   Music          VirtualBox VMs
+
+            ```
+
+          </script>
+        </section>
+        <!-- Slide 33 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            **Change Directory**
+
+            to move to another directory, we can use the `cd` command followed
+            by the directory we would like to move to.
+
+            ```sh
+            $ cd Code
+            
+            $pwd
+
+            /Users/Cody/Code
+            ```
+          </script>
+        </section>
+        <!-- Slide 34 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            **Change Directory**
+
+            To change into the directory directly *above* the one your're
+            currently in. We can use the shortcut `..` as the path to our `cd`
+            command.
+
+            ```sh
+            $ pwd
+
+            /Users/Cody/Code
+
+            $ cd ..
+
+            $ pwd
+            
+            /Users/Cody
+            ```
+
+          </script>
+        </section>
 			</div>
 		</div>
 
