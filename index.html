@@ -556,6 +556,111 @@
             ```
           </script>
         </section>
+        <!-- Slide 26 -->
+        <!-- ruby syntax highlighting looking funn -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Conditionals
+            `if` `true` do something.
+
+            ```ruby
+              coding_languages.each do |language| 
+                if language == 'ruby'
+                  puts "We're learning ruby today!"
+                else
+                  puts "Eventually, I'll get around to learning #{language]"
+                end
+              end
+              
+              "We're learning ruby today!"
+              "Eventually, I'll get around to learning javascript"
+              "Eventually, I'll get around to learning elixir"
+              => ['ruby', 'javascript', 'elixir']
+            ```
+          </script>
+        </section>
+        <!-- Slide 27 -->
+        <!-- ruby syntax highlighting looking funn -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Conditionals
+            
+            If you want to check for more than one condition you can use `elsif`
+            to check extra conditions
+
+            ```rb
+              first_name = 'Cody'
+              
+              if first_name == 'Bruce'
+                puts 'Hello, Bruce.'
+              elsif first_name == 'Cody'
+                puts 'Welcome back, Cody'
+              else
+                puts 'your first name is not Cody or Bruce'
+              end
+
+              'Welcome back, Cody'
+            ```
+          </script>
+        </section>
+        <!-- Slide 28 -->
+        <!-- ruby syntax highlighting looking funn -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Conditionals
+            
+            What happens with this set of conditionals?
+
+            ```ruby
+              age = 30
+
+              if age >= 18
+                puts 'you can vote'
+              elsif age >= 21
+                puts 'you can drink'
+              elsif age >= 25
+                puts 'you can rent a car'
+              else
+                puts 'have you stopped counting birthdays yet?'
+              end
+              
+              you can vote
+            ```
+            What's happening here? Why isn't ruby printing the last statement:
+            `have you stopped counting birthdays yet?`
+            
+          </script>
+        </section>
+        <!-- Slide 29 -->
+        <!-- ruby syntax highlighting looking funn -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Conditionals
+
+            Ruby will evaluate your conditional from top to bottom, as soon as
+            is finds a condition that is `true` it executes the code beneath
+            that statement and exits the conditional.  Ruby doesn't bother
+            checking the other values since it has already found one thats `true`
+            
+            ```ruby
+              age = 30
+
+              if age >= 18
+                #ruby sees this is true and runs this code
+                puts 'you can vote'
+                # after this code is ran, ruby exits, never checking the other
+                # conditions
+              elsif age >= 21
+                puts 'you can drink'
+              elsif age >= 25
+                puts 'you can rent a car'
+              else
+                puts 'have you stopped counting birthdays yet?'
+              end
+           ```
+            
+          </script>
+        </section>
 			</div>
 		</div>
 
