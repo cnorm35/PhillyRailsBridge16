@@ -1,0 +1,909 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to Ruby</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section>
+          <h3>Intro to Ruby and the Command Line</h3>
+          <!-- size these -->
+          <img
+        src="https://cdn.codementor.io/assets/topic/category_header/ruby-on-rails-bc9ab2af8d92eb4e7eb3211d548a09ad.png"
+        alt="ruby-logo">
+          <img
+        src="http://www.extensions.in.th/amitiae/09_2012_1/images/terminal_icon.png"
+        alt="command-line-logo">
+        </section>
+        <!-- Slide 2 -->
+        <section>
+          <h3>What is Ruby?</h3>
+          <p>Ruby is a programing language that was designed for programmer
+          productivity and fun.</p>
+          <!-- Slim down or resize quote -->
+          <!-- make these reveal -->
+          <blockquote>
+            "I hope to see Ruby help every programmer in the world to be
+            productive, and to enjoy programming, and to be happy. That is the
+            primary purpose of Ruby language." - Matz
+          </blockquote>
+          <blockquote>
+            “Often people, especially computer engineers, focus on the machines.
+            They think, "By doing this, the machine will run fast. By doing
+            this, the machine will run more effectively. By doing this, the
+            machine will something something something." They are focusing on
+            machines. But in fact we need to focus on humans, on how humans care
+            about doing programming or operating the application of the
+            machines. We are the masters. They are the slaves.”
+          </blockquote>
+        </section>
+        <!-- Slide 3 -->
+        <section>
+          <h3>What is Ruby?</h3>
+          <p>Ruby is a scripting language</p>
+          <p>Scripting languages:</p>
+          <ul>
+            <li>Doesn't need to be compiled</li>
+            <li>Uses an interperter</li>
+            <li>Easy to change frequently</li>
+          </ul>
+          <!-- make this easier to read -->
+          <h4>Examples of scripting languages</h4>
+          <p>Python, Ruby, Javascript</p>
+          <h4>Examples of Compiled Languages</h4>
+          <p>C#, Java, Obj-C</p>
+        </section>
+        <!-- Slide 4 -->
+        <sECTIOn>
+          <h3>How to get started?</h3>
+          <p>Getting started with programming in Ruby is easy</p>
+          <!-- add images of what the apps will look like for each platform -->
+          <p>For Macs: Open you 'Terminal app'</p>
+          <p>For Windows: Open git bash</p>
+        </section>
+        <!-- Slide 5 -->
+        <section class>
+          <section data-markdown>
+            Inside your command prompt type: `irb` and press `Enter`
+            <pre><code class='sh'>
+                $ irb
+                irb(main):001:0>
+            </code></pre>
+            This opens a interactive ruby environment.  To exit from `irb`
+            use the command `exit`, or you can use `ctrl + c`
+          </section>
+        </section>
+        <!-- Slide 6 -->
+        <section>
+          <h2>Programming with Ruby</h2>
+        </section>
+        <!-- Slide 7 -->
+        <section data-markdown>
+          <!-- Increase size -->
+          <script type="text/template">
+            ### Variables
+            A variable is a way to store information to be used later.
+
+            ```sh
+              > my_first_varaible = 'dog'
+              => 'dog'
+              > my_first_varaible
+              => 'dog'
+            ```
+            This is called **assignment**.  We're assigning the value `dog` to
+            the variable `my_firs_variable`
+
+
+          </script>
+        </section>
+        <!-- Slide 8-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Variables
+
+            When assigning variables, the *right side* is evaluated first, and
+            the result is *assigned* to the value on the left side.
+
+            ```sh
+              > cats = 3
+              => 3
+              
+              > dogs = 2
+              => 2
+
+              > pets = cats + dogs
+              => 5
+            ```
+          </script>
+        </section>
+        <!-- Slide 9-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Variables
+
+            What types of information can variables hold?
+
+            - Strings "I am a string"
+            - Numbers & resulats from calculations `2` `(2*3) + 4`
+            - Collections
+              - Arrays `[1,3,5,7]`    `['cody','norman']`
+              - Hashes `{ first_name: 'Cody', last_name: 'Norman', profession:
+              'Software Developer' }`
+            - Booleans `true` `false`
+
+            We're going to talk more about each one of these types.  Let's
+            starts with Strings...
+          </script>
+        </section>
+        <!-- Slide 10-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Strings
+            A String is just text.  You can use either single `'`, or double
+            quotation marks `"`
+
+            ```sh
+            > 'This works'
+            => 'This works'
+            
+            > "So does this"
+            => "So does this"
+            ```
+
+            Lets create a variable `first_name` and set it equal to your first
+            name
+
+            ```sh
+            > first_name = 'Cody'
+            => 'Cody'
+            ```
+          </script>
+        </section>
+        <!-- Slide 11-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Strings
+            Now let's do the same thing with `last_name`:
+            ```sh
+            > last_name = 'Norman'
+            => 'Norman'
+            ```
+            Now see what happens when we add these together
+            ```sh
+            > first_name + last_name
+            => 'CodyNorman'
+            ```
+            Computers are dumb, they can only do exactly what you tell them to.
+            Tell it to add a space between `first_name` and `last_name`
+            ```sh
+            > first_name + " " + last_name
+            => "Cody Norman"
+            ```
+          </script>
+        </section>
+        <!-- slide 12-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Strings
+
+            Ruby also gives us some handy methods to use on strings.  this is
+            part of the fun when programming in ruby.
+
+            ```sh
+            > activity = "learning ruby"
+            => "learning ruby"
+            
+            > activity.upcase
+            => "LEARNING RUBY"
+
+            > activity.capitalize
+            => "Learning ruby"
+            ```
+          </script>
+        </section>
+        <!-- slide 13-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Strings
+            String Interpolation - Fancy name, easy meaning.
+            This is when you output the value of a variable inside a String.
+
+            To use this, you **must use double quotation marks** and anything in
+            between `#{}` gets evaluated as ruby code.
+
+            Let's try to same example from before but using interpolation
+
+            ```sh
+            > "My name is #{first_name} #{last_name}"
+            => "My name is Cody Norman"
+
+            > "Three + Four is: #{ 3 + 4 }"
+            => "Three + Four is: 7"
+            ```
+          </script>
+        </section>
+        <!-- slide 14-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Numbers
+            There are 2 basic types of numbers: 
+
+            - `Integers` - whole numbers without decimal points
+              - `3   5  13  -21`
+            - `Floats` - numbers with decimal points.
+              - `0.0  3.14  0.0034`
+
+            Numbers have few basic operations you can perform with them.
+            
+          </script>
+        </section>
+        <!-- slide 15-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Using Operators with Numbers
+            `Addition: +`
+            ```sh
+              > 3 + 4
+              => 7
+            ```
+            
+            `subtraction: -`
+            ```sh
+              > 4 - 2
+              => 2
+            ```
+            
+            `Multiplication: *`
+            ```sh
+            > 15 * 10
+            => 150
+            ```
+            
+            `Division: /`
+            ```sh
+            > 10 / 3
+            => 3
+            ```
+          </script>
+        </section>
+        <!-- Slide 16 -->
+        <section data-markdown>
+          <!-- thinking about remobing modulo from this section -->
+          <!-- make smaller or cut into 2 slides -->
+          <script type="text/template">
+            ### Using Operators with Numbers
+
+            Wait, what was that?  Did you catch what happened with `Division`?
+            
+            `Division: /`
+            ```sh
+            > 10 / 3
+            => 3
+            ```
+
+            Ruby returned `3` instead of `3.333333`
+            When you're dividing with two `Integers` ruby assumes you would like
+            it to return an `Integer` as the result.  If you would like decimals
+            returned with your answer, you need to use a `Float` since Intergers
+            can not have any decimals
+
+            ```sh
+              > 10 / 3.0
+              => 3.33333333
+            ```
+          </script>
+        </section>
+        <!-- Slide 17 -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Booleans
+
+            Booleans are either `true` or `false`
+            
+            ```sh
+            first_name == last_name
+            => false
+
+            first_name == 'Cody'
+            => true
+            ```
+          </script>
+        </section>
+        <!-- Slide 18 -->
+        <section data-markdown>
+          <!-- Look into hash being highlighted wrong -->
+          <script type="text/template">
+            ### Collections
+            Back to the two types of Collections we metioned earlier:
+            `Arrays` and `Hashes`
+            
+            `Array`:
+            ```sh
+              my_array = ['my', 'first', 'array']
+              => ['my', 'first', 'array']
+            ```
+
+            `Hash`:
+            ```
+              my_ruby_hash = { first_hash: true, total_hashes: 0 }
+            ```
+          </script>
+        </section>
+        <!-- Slide 19 -->
+        <section data-markdown>
+          <!-- Look into hash being highlighted wrong -->
+          <script type="text/template">
+            ### Arrays
+            An `Array` is a list surrounded with square brackets
+
+            ```sh
+              coding_languages = ['ruby', 'javascript', 'elixir']
+              => ['ruby', 'javascript', 'elixir']
+            ```
+
+            Arrays can hold other arrays, strings, and variables
+            ```sh
+              nested_array = ['string value', ['another', 'array'], first_name]
+              => ['string value', ['another', 'array'], 'Cody']
+            ```
+          </script>
+        </section>
+        <!-- Slide 20 -->
+        <section data-markdown>
+          <!-- Look into hash being highlighted wrong -->
+          <script type="text/template">
+            ### Arrays
+            Each value inside an array has an *index*.  An index is the item's
+            position in the array **starting at 0**.
+            
+            ```sh
+              > coding_languages[0]
+              => 'ruby'
+
+              > coding_languages[1]
+              => 'javascript'
+
+              > coding_languages[2]
+              => 'elixir'
+
+              > coding_languages[5]
+              => nil    (think of this as rubys way of saying nothing)
+            ```
+          </script>
+        </section>
+        <!-- Slide 21 -->
+        <section data-markdown>
+          <!-- Look into hash being highlighted wrong -->
+          <script type="text/template">
+            ### Arrays
+
+            Just like Strings, Arrays have some handy methods available to us.
+
+            ```sh
+            > coding_languages.first
+            => 'ruby'
+
+            > coding_languages.last
+            => 'elixir'
+
+            ```
+          </script>
+        </section>
+        <!-- Slide 20 -->
+        <section data-markdown>
+          <!-- Look into hash being highlighted wrong -->
+          <script type="text/template">
+            ### Hashes
+
+            Hashes are filled with `key: value` pairs.  They look like this
+            `my_info = {first_name: 'Cody', last_name: 'Norman', occupation:
+            'Software Developer' }`
+
+            Instead of using an index to refer to a value, we use it's `key`
+            instead.
+
+            ```sh
+              > my_info[:fist_name]
+              => 'Cody'
+            ```
+          </script>
+        </section>
+        <!-- Slide 21 -->
+        <section data-markdown>
+          <!-- Look into hash being highlighted wrong -->
+          <script type="text/template">
+            ### Hashes
+
+            **Hash Syntax**
+            Hashes are surrounded with `{ }` and `key: value` pairs seperated by
+            a comma.
+
+            Since we refer to a Hashes value by it's `key`, each `key` needs to
+            be unique
+
+            There are 2 different ways to declare `key: value` pairs inside a
+            Hash.  
+
+            The older Hash Rocket syntax, and the current one using colons
+
+          </script>
+        </section>
+        <!-- Slide 22 -->
+        <section data-markdown>
+          <!-- Look into hash being highlighted wrong -->
+          <!-- Make this shorter -->
+          <script type="text/template">
+            ### Hashes
+            *Hash Rocket Syntax*
+            ```sh
+              > hash_rocket_address = { :city => "Philadelphia", :state=> "PA", :zip => 19143 }
+              => { :city=> "Philadelphia", :state=> "PA", :zip=> 19143 }
+
+              > hash_rocket_address[:city]
+              => "Philadelphia"
+            ```
+            *Using colons* 
+            ```sh
+              > colons_address = { city: 'Philadelphia', state: 'PA', zip: 19143 }
+              => { :city=> "Philadelphia", :state=> "PA", :zip=> 19143 }
+              
+              > colons_address[:city]
+              => "Philadelphia"
+
+              > colons_address[:city] == hash_rocket_address[:city]
+              => true
+
+            ```
+
+            Adding new values to the hash is easy:
+
+            ```sh
+              > colon_address[:street] = "22 S. 3rd Street"
+              => '22 S. 3rd Street'
+
+              > colon_address
+              => { :city=> "Philadelphia", :state=> "PA", :zip=> 19143, street:
+              '22 S. 3rd Street' }
+            ```
+
+          </script>
+        </section>
+        <!-- Slide 23 -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Methods
+
+            Methods allow us to reuse bits of other code.  Ruby comes with a lot
+            of pre-defined methods that can be called with
+            *`.name_of_the_method`*.  We already saw a few of these with Arrays and
+            Strings.  Each type we've talked about so far (called Classes
+            (should you add something about Classes?) ) has their own set of
+            methods.
+
+            ```sh
+              > first_name.class
+              => String
+
+              > first_name.upcase
+              => "CODY"
+
+              > first_name.downcase
+              => "cody"
+
+              > first_name.capitalize
+              => "Cody"
+            ```
+
+          </script>
+        </section>
+        <!-- Slide 24 -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Methods
+            
+            You can also create your own methods
+
+            ```sh
+              > def my_method
+              >   puts 'my first method'
+              > end
+
+              => :my_method
+
+              > my_method
+              my fist method
+              => nil
+            ```
+          </script>
+        </section>
+        <!-- Slide 25 -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Loops
+
+            Loops allow us to do something to each item inside a collection.
+
+            ```sh
+              > coding_languages = ['ruby', 'javascript', 'elixir']
+              => ['ruby', 'javascript', 'elixir']
+
+              > coding_languages.each do |language|
+              >   puts language
+              > end
+              ruby
+              javascript
+              elixir
+              => ['ruby', 'javascript', 'elixir']
+            ```
+          </script>
+        </section>
+        <!-- Slide 26 -->
+        <!-- ruby syntax highlighting looking funn -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Conditionals
+            `if` `true` do something.
+
+            ```ruby
+              coding_languages.each do |language| 
+                if language == 'ruby'
+                  puts "We're learning ruby today!"
+                else
+                  puts "Eventually, I'll get around to learning #{language]"
+                end
+              end
+              
+              "We're learning ruby today!"
+              "Eventually, I'll get around to learning javascript"
+              "Eventually, I'll get around to learning elixir"
+              => ['ruby', 'javascript', 'elixir']
+            ```
+          </script>
+        </section>
+        <!-- Slide 27 -->
+        <!-- ruby syntax highlighting looking funn -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Conditionals
+            
+            If you want to check for more than one condition you can use `elsif`
+            to check extra conditions
+
+            ```rb
+              first_name = 'Cody'
+              
+              if first_name == 'Bruce'
+                puts 'Hello, Bruce.'
+              elsif first_name == 'Cody'
+                puts 'Welcome back, Cody'
+              else
+                puts 'your first name is not Cody or Bruce'
+              end
+
+              'Welcome back, Cody'
+            ```
+          </script>
+        </section>
+        <!-- Slide 28 -->
+        <!-- ruby syntax highlighting looking funn -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Conditionals
+            
+            What happens with this set of conditionals?
+
+            ```ruby
+              age = 30
+
+              if age >= 18
+                puts 'you can vote'
+              elsif age >= 21
+                puts 'you can drink'
+              elsif age >= 25
+                puts 'you can rent a car'
+              else
+                puts 'have you stopped counting birthdays yet?'
+              end
+              
+              you can vote
+            ```
+            What's happening here? Why isn't ruby printing the last statement:
+            `have you stopped counting birthdays yet?`
+            
+          </script>
+        </section>
+        <!-- Slide 29 -->
+        <!-- ruby syntax highlighting looking funn -->
+        <section data-markdown>
+          <script type="text/template">
+            ### Conditionals
+
+            Ruby will evaluate your conditional from top to bottom, as soon as
+            is finds a condition that is `true` it executes the code beneath
+            that statement and exits the conditional.  Ruby doesn't bother
+            checking the other values since it has already found one thats `true`
+            
+            ```ruby
+              age = 30
+
+              if age >= 18
+                #ruby sees this is true and runs this code
+                puts 'you can vote'
+                # after this code is ran, ruby exits, never checking the other
+                # conditions
+              elsif age >= 21
+                puts 'you can drink'
+              elsif age >= 25
+                puts 'you can rent a car'
+              else
+                puts 'have you stopped counting birthdays yet?'
+              end
+           ```
+            
+          </script>
+        </section>
+        <!--************* Beginning of Command Line section ****************-->
+        <!-- Slide 30 -->
+        <section data-markdown>
+          <script type="text/template">
+            #Command Line Basics
+          </script>
+        </section>
+        <!-- Slide 31 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            **Directory**
+
+            What is a directory?
+            
+            A directory is a folder that contain other directories or files
+            
+
+            **Current Directory**
+
+            You're always inside a directory.  The see where you're at in your
+            file systemy run the command `pwd`.  This stands for 'print working
+            directory'.
+
+            ```sh
+            $ pwd
+            /Users/Cody/Code/Presentations/intro_to_ruby
+            ```
+
+            Don't worry about yours looking different.
+          </script>
+        </section>
+        <!-- Slide 32 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+            
+            **Listing Files** (check on difference between OSX and Windows)
+            
+            To see a list of files inside the `directory` that you are
+            currently in use the `ls` command:
+
+            ```sh
+            $ ls
+            
+            Applications   Documents      Library        Pictures       exercism
+            Code           Downloads      Movies         Public         node_modules
+            Desktop        Google Drive   Music          VirtualBox VMs
+
+            ```
+
+          </script>
+        </section>
+        <!-- Slide 33 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            **Change Directory**
+
+            to move to another directory, we can use the `cd` command followed
+            by the directory we would like to move to.
+
+            ```sh
+            $ cd Code
+            
+            $pwd
+
+            /Users/Cody/Code
+            ```
+          </script>
+        </section>
+        <!-- Slide 34 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            **Change Directory**
+
+            To change into the directory directly *above* the one your're
+            currently in. We can use the shortcut `..` as the path to our `cd`
+            command.
+
+            ```sh
+            $ pwd
+
+            /Users/Cody/Code
+
+            $ cd ..
+
+            $ pwd
+            
+            /Users/Cody
+            ```
+
+          </script>
+        </section>
+        <!-- Slide 35 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            **Change Directory**
+
+            When giving a file to the `cd` command, you can use either a
+            `full_path` which is the path of that directory starting from the
+            top level 
+            
+            `$ cd /Users/Cody/Code`
+            
+            or a `relative_path` which is
+            based on where we are currently at inside our file system (to find
+            this out, run `pwd`)
+
+          </script>
+        </section>
+        <!-- Slide 36 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+            
+            *relative path*
+            
+            With a `relative path`, you dont have to pass the whole path from
+            the top, just based on the directory where youre currently at.
+
+
+            ```sh
+              $ pwd
+
+              /Users/Cody/Code
+
+              $ cd Presentations
+
+              $ pwd
+
+              /Users/Cody/Code/Presentations
+            ```
+          </script>
+        </section>
+        <!-- Slide 37 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Command Line Basics
+
+            *change directory* shortcuts
+
+            To get to your home path, just run `cd` with no path
+
+            ```sh
+              $ cd
+              
+              $ pwd
+
+              /Users/Cody
+            ```
+
+            To get to the last directory you were in use `-` (dash) as the path to the
+            `cd` command
+
+            ```sh
+              $ cd -
+
+              $ pwd
+
+              /Users/Cody/Cody/Presentations
+            ```
+            
+          </script>
+        </section>
+        <!-- Slide 38 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Creating new directories
+
+            To create a new directory, we use the 'Make Directory' command with
+            
+            `$ mkdir name_of_the_directory`
+            
+            ```sh
+              $ mkdir my_first_directory
+
+              $ ls
+
+
+
+              $ cd my_first_directory
+
+              $ pwd
+
+              /Users/Code/Code/Presentations/my_first_directory
+            ```
+
+            
+          </script>
+        </section>
+        <!-- Slide 39 -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Creating new files
+
+            To create a new file, we can use the `touch` command.  `touch` will
+            create a new file for us *if there is not one already present*
+
+            ```sh
+              $ touch my_first_file.txt
+
+              $ ls
+
+              my_first_file.txt
+
+              $ touch my_first_file.txt
+
+              $ ls
+
+              my_first_file.txt
+            ```
+
+            We do not create a duplicate file if one already exists
+
+          </script>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
