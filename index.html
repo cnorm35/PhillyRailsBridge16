@@ -497,14 +497,16 @@
               '22 S. 3rd Street', country: "USA" }
             ```
           </script>
-        </section
+        </section>
         <!-- Slide 23 -->
         <section data-markdown>
           <script type="text/template">
             ### Methods
 
-            Methods allow us to reuse bits of other code.  Ruby comes with a lot
-            of pre-defined methods that can be called with
+            Methods allow us to reuse bits of other code.  Think of methods like
+            the verbs in ruby.  
+            
+            Ruby comes with a lot of pre-defined methods that can be called with
             *`.name_of_the_method`*.  We already saw a few of these with Arrays and
             Strings.  Each type we've talked about so far (called Classes
             (should you add something about Classes?) ) has their own set of
@@ -553,6 +555,8 @@
 
             Loops allow us to do something to each item inside a collection.
 
+            Looping with Arrays
+
             ```sh
               > coding_languages = ['ruby', 'javascript', 'elixir']
               => ['ruby', 'javascript', 'elixir']
@@ -565,6 +569,33 @@
               elixir
               => ['ruby', 'javascript', 'elixir']
             ```
+
+            `language` is our *iterator* for the loop. This is a variable we use
+            to represent the current item in the `array`.
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Loops
+
+            Looping with Hashes
+
+            Since each item in our `hash` is a `key: value` pair, we will have
+            two
+            variables in our iterator.  The first is for `key`, the second is
+            for `value`
+            ```sh
+              > colon_address.each do |key, value|
+              >   puts "Key: #{key}, Value: #{value}"
+              > end
+              Key: city, Value: Philadelphia
+              Key: state, Value: PA
+              Key: zip, Value: 19143
+              Key: street, Value: 22 S. 3rd Street
+              Key: country, Value: USA
+              => { :city=> "Philadelphia", :state=> "PA", :zip=> 19143, street:
+              '22 S. 3rd Street', country: "USA" }
+            ```
           </script>
         </section>
         <!-- Slide 26 -->
@@ -572,20 +603,20 @@
         <section data-markdown>
           <script type="text/template">
             ### Conditionals
-            `if` `true` do something.
+            `if true` do something.
 
             ```ruby
               coding_languages.each do |language| 
                 if language == 'ruby'
                   puts "We're learning ruby today!"
                 else
-                  puts "Eventually, I'll get around to learning #{language]"
+                  puts "Eventually, I want to get around to learning #{language}"
                 end
               end
               
-              "We're learning ruby today!"
-              "Eventually, I'll get around to learning javascript"
-              "Eventually, I'll get around to learning elixir"
+              We're learning ruby today!
+              Eventually, I want to get around to learning javascript
+              Eventually, I want to around to learning elixir
               => ['ruby', 'javascript', 'elixir']
             ```
           </script>
@@ -620,7 +651,7 @@
           <script type="text/template">
             ### Conditionals
             
-            What happens with this set of conditionals?
+            What will happen with this set of conditionals?
 
             ```ruby
               age = 30
@@ -637,7 +668,7 @@
               
               you can vote
             ```
-            What's happening here? Why isn't ruby printing the last statement:
+            What's happening here? `age` is greater than 25, why isn't ruby printing the last statement:
             `have you stopped counting birthdays yet?`
             
           </script>
