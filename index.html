@@ -147,7 +147,7 @@
             What types of information can variables hold?
 
             - Strings "I am a string"
-            - Numbers & resulats from calculations `2` `(2*3) + 4`
+            - Numbers & results from calculations `2` `(2*3) + 4`
             - Collections
               - Arrays `[1,3,5,7]`    `['cody','norman']`
               - Hashes `{ first_name: 'Cody', last_name: 'Norman', profession:
@@ -162,7 +162,7 @@
         <section data-markdown>
           <script type="text/template">
             ### Strings
-            A String is just text.  You can use either single `'`, or double
+            A *String* is just text.  You can use either single `'`, or double
             quotation marks `"`
 
             ```sh
@@ -208,26 +208,6 @@
         <section data-markdown>
           <script type="text/template">
             ### Strings
-
-            Ruby also gives us some handy methods to use on strings.  this is
-            part of the fun when programming in ruby.
-
-            ```sh
-            > activity = "learning ruby"
-            => "learning ruby"
-            
-            > activity.upcase
-            => "LEARNING RUBY"
-
-            > activity.capitalize
-            => "Learning ruby"
-            ```
-          </script>
-        </section>
-        <!-- slide 13-->
-        <section data-markdown>
-          <script type="text/template">
-            ### Strings
             String Interpolation - Fancy name, easy meaning.
             This is when you output the value of a variable inside a String.
 
@@ -242,6 +222,26 @@
 
             > "Three + Four is: #{ 3 + 4 }"
             => "Three + Four is: 7"
+            ```
+          </script>
+        </section>
+        <!-- slide 13-->
+        <section data-markdown>
+          <script type="text/template">
+            ### Strings
+
+            Ruby also gives us some handy methods to use on strings.  this is
+            part of the fun when programming in ruby.
+
+            ```sh
+            > activity = "learning ruby"
+            => "learning ruby"
+            
+            > activity.upcase
+            => "LEARNING RUBY"
+
+            > activity.capitalize
+            => "Learning ruby"
             ```
           </script>
         </section>
@@ -294,9 +294,7 @@
           <!-- thinking about remobing modulo from this section -->
           <!-- make smaller or cut into 2 slides -->
           <script type="text/template">
-            ### Using Operators with Numbers
-
-            Wait, what was that?  Did you catch what happened with `Division`?
+            Wait...what was that?  Did you catch what happened with `Division`?
             
             `Division: /`
             ```sh
@@ -348,7 +346,7 @@
 
             `Hash`:
             ```
-              my_ruby_hash = { first_hash: true, total_hashes: 0 }
+              my_hash = { first_hash: true, total_hashes: 0 }
             ```
           </script>
         </section>
@@ -365,6 +363,9 @@
             ```
 
             Arrays can hold other arrays, strings, and variables
+
+            When an `array` contains another `array`, we call this a nested
+            array.
             ```sh
               nested_array = ['string value', ['another', 'array'], first_name]
               => ['string value', ['another', 'array'], 'Cody']
@@ -447,7 +448,7 @@
             There are 2 different ways to declare `key: value` pairs inside a
             Hash.  
 
-            The older Hash Rocket syntax, and the current one using colons
+            The older Hash Rocket syntax, and the current one using colons.
 
           </script>
         </section>
@@ -477,6 +478,11 @@
               => true
 
             ```
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Hashes
 
             Adding new values to the hash is easy:
 
@@ -484,13 +490,14 @@
               > colon_address[:street] = "22 S. 3rd Street"
               => '22 S. 3rd Street'
 
+              > colon_address[:country] = "USA"
+
               > colon_address
               => { :city=> "Philadelphia", :state=> "PA", :zip=> 19143, street:
-              '22 S. 3rd Street' }
+              '22 S. 3rd Street', country: "USA" }
             ```
-
           </script>
-        </section>
+        </section
         <!-- Slide 23 -->
         <section data-markdown>
           <script type="text/template">
