@@ -732,6 +732,7 @@
             $ pwd
             /Users/Cody/Code/Presentations/intro_to_ruby
             ```
+            When you see `$` that means your at you command prompt
 
             Don't worry about yours looking different.
           </script>
@@ -744,7 +745,7 @@
             **Listing Files** (check on difference between OSX and Windows)
             
             To see a list of files inside the `directory` that you are
-            currently in use the `ls` command:
+            currently in use the **`ls`** command:
 
             ```sh
             $ ls
@@ -770,7 +771,7 @@
             ```sh
             $ cd Code
             
-            $pwd
+            $ pwd
 
             /Users/Cody/Code
             ```
@@ -784,7 +785,8 @@
             **Change Directory**
 
             To change into the directory directly *above* the one your're
-            currently in. We can use the shortcut `..` as the path to our `cd`
+            currently in. We can use the shortcut **`..`** as the path to our
+            **`cd`**
             command.
 
             ```sh
@@ -808,15 +810,15 @@
 
             **Change Directory**
 
-            When giving a file to the `cd` command, you can use either a
-            `full_path` which is the path of that directory starting from the
+            When giving a file to the **`cd`** command, you can use either a
+            **`full path`** which is the path of that directory starting from the
             top level 
             
             `$ cd /Users/Cody/Code`
             
-            or a `relative_path` which is
+            or a **`relative path`** which is
             based on where we are currently at inside our file system (to find
-            this out, run `pwd`)
+            this out, run **`pwd`**)
 
           </script>
         </section>
@@ -827,8 +829,8 @@
             
             *relative path*
             
-            With a `relative path`, you dont have to pass the whole path from
-            the top, just based on the directory where youre currently at.
+            With a **`relative path`**, you dont have to pass the whole path
+            starting from your home directoy, just based on the directory where youre currently at.
 
 
             ```sh
@@ -849,7 +851,7 @@
           <script type="text/template">
             ###Command Line Basics
 
-            *change directory* shortcuts
+            Some helpful shortcuts
 
             To get to your home path, just run `cd` with no path
 
@@ -871,6 +873,8 @@
 
               /Users/Cody/Cody/Presentations
             ```
+
+            To retreive your last command press the up arrow key.
             
           </script>
         </section>
@@ -887,6 +891,8 @@
               $ mkdir my_first_directory
 
               $ ls
+
+              my_first_directory    intro_to_ruby_presentation
 
 
 
@@ -923,6 +929,56 @@
             ```
 
             We do not create a duplicate file if one already exists
+
+          </script>
+        </section>
+        <!-- Slide 40-ish -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Deleting files and directories
+
+            To delete a file we can use the remove *`rm`* command
+
+            > With great power comes great responsiblity. - Ben Parker
+
+            ** This command will not ask for comfirmation, and can not be undone
+            **
+
+            ```sh
+              $ rm my_first_file.txt
+
+              $ ls
+
+              intro_to_ruby_presentation
+            ```
+
+          </script>
+        </section>
+        <!-- Slide 41-ish -->
+        <section data-markdown>
+          <script type="text/template">
+            ###Deleting files and directories
+
+            To delete a directory we can use the remove *`rm -rf`* command.
+            This will delete the **`directory`** along with *everything* inside
+
+
+            ** This command will not ask for comfirmation, and can not be undone
+            **
+
+            ```sh
+              $ mkdir some_directory
+
+              $ ls 
+
+              intro_to_ruby_presentation    some_directory
+
+              $ rm -rf some_directory
+
+              $ ls
+
+              intro_to_ruby_presentation
+            ```
 
           </script>
         </section>
